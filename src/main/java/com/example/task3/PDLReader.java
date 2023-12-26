@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class PDLReader implements Facade {
     @Override
     public JSONObject getInfo(String website) throws IOException {
-        String API_KEY = "7d5358bd45d14506e09173e5eea1e0cee9d15639f75643f6ff8354726160110f";
+        // No api key because website throws an error
+        String API_KEY = "";
         URL url = new URL("https://api.peopledatalabs.com/v5/company/enrich?website=ucu.edu.ua");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
